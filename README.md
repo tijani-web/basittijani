@@ -35,6 +35,15 @@ A developer challenge platform designed to help programmers enhance their skills
 - Fast and optimized performance  
 
 ---
+I’m always open to collaborating on projects, discussing ideas, or just chatting about tech!
+
+Email: tijanibwebdev@gmail.com
+LinkedIn: [Basit Tijani](https://www.linkedin.com/in/basit-tijani-4362b3320/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BYvADMSUvTCKDIbwk5J82Ow%3D%3D)_
+Twitter/X: @tijani_web
+Portfolio: https://basittijani.com
+
+Made with ❤️ by Basit Tijani
+
 
 ## 🚀 Getting Started
 To run this portfolio locally:
@@ -52,11 +61,4 @@ npm install
 # Start the development server
 
 npm run dev
-I’m always open to collaborating on projects, discussing ideas, or just chatting about tech!
 
-Email: tijanibwebdev@gmail.com
-LinkedIn: Basit Tijani
-Twitter/X: @tijani_web
-Portfolio: https://basittijani.com
-
-Made with ❤️ by Basit Tijani
