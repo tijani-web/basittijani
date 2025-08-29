@@ -1,18 +1,20 @@
 # Basit Tijani – Portfolio
 
-👋 Hi, I'm **Basit Tijani**, a Software Engineering student at Aptech Institution.I focus on writing code that’s clear, functional, and practical for real-world use.
+👋 Hi, I'm **Basit Tijani**, a Software Engineering student at Aptech Institution. I focus on writing code that’s clear, functional, and practical for real-world use.
 
 ---
 
 ## 🌐 Live Portfolio
 Check out my live portfolio here: [https://basittijani.com](https://basittijani.com)  
 
+---
+
 ## 📂 Featured Project
 ### StackProof
 A developer challenge platform designed to help programmers enhance their skills through practical, real-world coding tasks.  
 
 - **Role:** Creator & Developer  
-- **Tech Used:** React, JavaScript, REST API , Firebase, Firestore. 
+- **Tech Used:** React, JavaScript, REST API, Firebase, Firestore  
 - **Live Demo:** [StackProof Live](https://tijani-web.github.io/stack-proof-app/)  
 - **Source Code:** [GitHub Repository](https://github.com/tijani-web/stack-proof-app)  
 
@@ -22,7 +24,7 @@ A developer challenge platform designed to help programmers enhance their skills
 **Frontend:** React · JavaScript · HTML · CSS  
 **Tools:** Vite · Git · GitHub  
 **Styling & Animations:** CSS3 · GSAP (for smooth animations)  
-**Backend & APIs:** REST APIs · C/C++ · FIREBASE/FIRESTORE AUTH. 
+**Backend & APIs:** REST APIs · C/C++ · Firebase/Firestore Auth  
 
 ---
 
@@ -48,16 +50,13 @@ cd basittijani
 npm install
 
 # Start the development server
-npm run dev
 
+npm run dev
 I’m always open to collaborating on projects, discussing ideas, or just chatting about tech!
 
 Email: tijanibwebdev@gmail.com
-
-LinkedIn: [Basit Tijani](https://www.linkedin.com/in/basit-tijani-4362b3320/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BYvADMSUvTCKDIbwk5J82Ow%3D%3D)
-
+LinkedIn: Basit Tijani
 Twitter/X: @tijani_web
-
 Portfolio: https://basittijani.com
 
 Made with ❤️ by Basit Tijani
