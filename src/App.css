@@ -1525,6 +1525,7 @@ textarea.form-input {
   height: 250px;
   object-fit: cover;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 .portfolio-item-card:hover .portfolio-item-image img {
