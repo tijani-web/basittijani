@@ -1,0 +1,253 @@
+/* Portfolio Testimonials Section - Matching Overview Style */
+.portfolio-testimonials-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.portfolio-testimonial-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.portfolio-section-label {
+  color: #00e0ff !important;
+  font-size: 0.9rem !important;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px !important;
+  text-shadow: 0 0 10px rgba(0, 224, 255, 0.4) !important;
+  display: block;
+}
+
+.portfolio-testimonial-header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 0 0 15px rgba(0, 224, 255, 0.4);
+  position: relative;
+  display: inline-block;
+}
+
+.portfolio-header-underline {
+  height: 4px;
+  width: 100px;
+  background: linear-gradient(90deg, #00e0ff, transparent);
+  margin: 0 auto 1.5rem;
+  transform-origin: center;
+  border-radius: 2px;
+}
+
+.portfolio-testimonial-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* row setup */
+.portfolio-testimonials-row {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+/* card style */
+.portfolio-testimonial-card {
+  min-width: 320px;
+  max-width: 320px;
+  flex-shrink: 0;
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 3px solid #1d373b;
+  /* background: linear-gradient(145deg, rgba(25, 26, 35, 0.95), rgba(16, 17, 26, 0.95)); */
+  border-left: 5px solid rgba(255, 255, 255, 0.119);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portfolio-testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 224, 255, 0.3);
+  border-color: rgba(0, 224, 255, 0.3);
+}
+
+.portfolio-testimonial-feedback {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  position: relative;
+}
+
+.portfolio-testimonial-feedback::before {
+  content: "";
+  font-size: 3rem;
+  color: #00e0ff;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.portfolio-testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.portfolio-testimonial-author h3 {
+  color: #00e0ff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 0 8px rgba(0, 224, 255, 0.3);
+}
+
+.portfolio-testimonial-role {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Fade edges */
+.portfolio-fade-left,
+.portfolio-fade-right {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.portfolio-fade-left {
+  left: 0;
+  background: linear-gradient(to right, rgba(10, 10, 15, 1), rgba(10, 10, 15, 0));
+}
+
+.portfolio-fade-right {
+  right: 0;
+  background: linear-gradient(to left, rgba(10, 10, 15, 1), rgba(10, 10, 15, 0));
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .portfolio-testimonials-wrapper {
+    padding: 60px 20px;
+  }
+  
+  .portfolio-testimonial-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .portfolio-testimonial-description {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+  
+  .portfolio-testimonials-row {
+    gap: 1.5rem;
+  }
+  
+  .portfolio-testimonial-card {
+    min-width: 280px;
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-testimonials-wrapper {
+    padding: 50px 15px;
+  }
+  
+  .portfolio-testimonial-header h1 {
+    font-size: 2rem;
+  }
+  
+  .portfolio-testimonial-description {
+    font-size: 1rem;
+  }
+  
+  .portfolio-testimonials-row {
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .portfolio-testimonial-card {
+    min-width: 260px;
+    padding: 1.5rem;
+  }
+  
+  .portfolio-fade-left,
+  .portfolio-fade-right {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-testimonials-wrapper {
+    padding: 40px 12px;
+  }
+  
+  .portfolio-testimonial-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .portfolio-header-underline {
+    width: 50px;
+    height: 3px;
+  }
+  
+  .portfolio-testimonial-description {
+    font-size: 0.95rem;
+  }
+  
+  .portfolio-testimonials-row {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .portfolio-testimonial-card {
+    min-width: 240px;
+    padding: 1.2rem;
+  }
+  
+  .portfolio-testimonial-feedback {
+    font-size: 0.95rem;
+  }
+  
+  .portfolio-testimonial-feedback::before {
+    font-size: 2.5rem;
+    top: -15px;
+  }
+  
+  .portfolio-fade-left,
+  .portfolio-fade-right {
+    width: 60px;
+  }
+}
+
+/* Prevent hover effects on touch devices */
+@media (hover: none) {
+  .portfolio-testimonial-card:hover {
+    transform: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
