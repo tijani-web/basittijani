@@ -57,9 +57,15 @@ const Header = () => {
         </div>
         
         <div className={`nav-links ${isMenuOpen ? 'nav-links-active' : ''}`}>
+          <NavLink to="/" onClick={closeMenu} 
+            ref={el => linksRef.current[0] = el}
+            className="nav-link"
+            >
+            Home
+          </NavLink>
           <a 
             href="/#about" 
-            ref={el => linksRef.current[0] = el}
+            ref={el => linksRef.current[1] = el}
             className="nav-link"
             onClick={closeMenu}
           >
@@ -67,7 +73,7 @@ const Header = () => {
           </a>
           <NavLink 
             to="/projects" 
-            ref={el => linksRef.current[1] = el}
+            ref={el => linksRef.current[2] = el}
             className="nav-link"
             onClick={closeMenu}
           >
@@ -75,7 +81,7 @@ const Header = () => {
           </NavLink>
           <a 
             href="/#contact" 
-            ref={el => linksRef.current[2] = el}
+            ref={el => linksRef.current[3] = el}
             className="nav-link"
             onClick={closeMenu}
           >
