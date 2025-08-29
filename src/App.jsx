@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import './App.css'
 import Contact from './components/Contact'
 import Hero from './components/Hero'
@@ -39,6 +40,7 @@ function App() {
         }}
       />
       <Footer/>
+      <Analytics/>
     </>
   )
 }
