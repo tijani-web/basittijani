@@ -1710,7 +1710,7 @@ textarea.form-input {
 
 .portfolio-item-image img {
   width: 100%;
-  height: 250px;
+  height: auto;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
