@@ -1,12 +1,63 @@
-# React + Vite
+# Basit Tijani – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+👋 Hi, I'm **Basit Tijani**, a Software Engineering student at Aptech Institution.I focus on writing code that’s clear, functional, and practical for real-world use.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Portfolio
+Check out my live portfolio here: [https://basittijani.com](https://basittijani.com)  
 
-## Expanding the ESLint configuration
+## 📂 Featured Project
+### StackProof
+A developer challenge platform designed to help programmers enhance their skills through practical, real-world coding tasks.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Role:** Creator & Developer  
+- **Tech Used:** React, JavaScript, REST API , Firebase, Firestore. 
+- **Live Demo:** [StackProof Live](https://tijani-web.github.io/stack-proof-app/)  
+- **Source Code:** [GitHub Repository](https://github.com/tijani-web/stack-proof-app)  
+
+---
+
+## 🛠 Tech Stack
+**Frontend:** React · JavaScript · HTML · CSS  
+**Tools:** Vite · Git · GitHub  
+**Styling & Animations:** CSS3 · GSAP (for smooth animations)  
+**Backend & APIs:** REST APIs · C/C++ · FIREBASE/FIRESTORE AUTH. 
+
+---
+
+## ⚡ Key Features
+- Fully responsive design (desktop & mobile)  
+- Smooth animations and transitions  
+- Clean, minimal, and user-focused UI/UX  
+- Fast and optimized performance  
+
+---
+
+## 🚀 Getting Started
+To run this portfolio locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/tijani-web/basittijani.git
+
+# Navigate into the project directory
+cd basittijani
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+I’m always open to collaborating on projects, discussing ideas, or just chatting about tech!
+
+Email: tijanibwebdev@gmail.com
+
+LinkedIn: [Basit Tijani](https://www.linkedin.com/in/basit-tijani-4362b3320/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BYvADMSUvTCKDIbwk5J82Ow%3D%3D)
+
+Twitter/X: @tijani_web
+
+Portfolio: https://basittijani.com
+
+Made with ❤️ by Basit Tijani
