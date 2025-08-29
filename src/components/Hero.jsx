@@ -12,9 +12,9 @@ const Hero = () => {
       <LightRays
         raysOrigin="top"
         raysColor="#ffffff"
-        raysSpeed={1.5}
+        raysSpeed={2}
         lightSpread={1}
-        rayLength={3}
+        rayLength={4}
         followMouse={true}
         mouseInfluence={0.1}
         noiseAmount={0.1}
