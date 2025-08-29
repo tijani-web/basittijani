@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://basittijani.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Projects main page -->
+  <url>
+    <loc>https://basittijani.com/projects</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual project pages (hidden but SEO-friendly) -->
+  <url>
+    <loc>https://basittijani.com/projects/stackproof</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://basittijani.com/projects/wandermind</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://basittijani.com/projects/fintech-system</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>

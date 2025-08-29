@@ -1,0 +1,109 @@
+
+.project-page {
+  font-family: "Inter", sans-serif;
+  color: #1f2937; /* neutral gray */
+  line-height: 1.6;
+  padding: 2rem;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.project-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.project-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.project-header p {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.project-overview,
+.project-features,
+.project-tech,
+.project-links {
+  margin-top: 2rem;
+}
+
+.project-overview h2,
+.project-features h2,
+.project-tech h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #2563eb; /* blue accent */
+  padding-left: 0.5rem;
+}
+
+.project-overview p,
+.project-tech p {
+  font-size: 1rem;
+  color: #374151;
+}
+
+.project-features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-features li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.project-features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.project-links a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-links a:first-child {
+  background: #2563eb;
+  color: #fff;
+}
+
+.project-links a:first-child:hover {
+  background: #1e40af;
+}
+
+.project-links a:last-child {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.project-links a:last-child:hover {
+  background: #e5e7eb;
+}
