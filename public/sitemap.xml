@@ -6,11 +6,45 @@
     <priority>1.0</priority>
   </url>
 
+
+
   <!-- Projects main page -->
   <url>
     <loc>https://basittijani.com/projects</loc>
     <priority>0.8</priority>
   </url>
+
+  <!-- FluxAPI - Web API Builder -->
+<url>
+  <loc>https://basittijani.com/projects/fluxapi</loc>
+  <lastmod>2026-01-13</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- FlowPitch - Community Roadmap Builder -->
+<url>
+  <loc>https://basittijani.com/projects/flowpitch</loc>
+  <lastmod>2026-01-13</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- Nexora - AI Knowledge Hub -->
+<url>
+  <loc>https://basittijani.com/projects/nexora</loc>
+  <lastmod>2026-01-13</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- Zylorix - Virtual STEM Lab (Ongoing Research) -->
+<url>
+  <loc>https://basittijani.com/projects/zylorix</loc>
+  <lastmod>2026-01-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
 
   <!-- Individual project pages (hidden but SEO-friendly) -->
   <url>
