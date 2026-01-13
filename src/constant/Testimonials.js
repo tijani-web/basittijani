@@ -2,41 +2,41 @@ export const testimonials = [
   {
     name: "Habby",
     feedback:
-      "Working with Basit feels effortless. He understands what’s needed and delivers clean, reliable solutions every time."
+      "Working with Basit feels natural and straightforward. He understands requirements quickly and consistently delivers clean, dependable solutions without unnecessary friction."
   },
   {
     name: "Adeyemi Yemorazy",
     feedback:
-      "Basit has a way of simplifying tough problems. His approach makes complex work feel surprisingly manageable."
+      "Basit has a strong ability to break down complex problems into clear, workable steps. His approach makes difficult tasks feel achievable and well thought out."
   },
   {
     name: "Abdulakeem Abiodun",
     feedback:
-      "I’ve seen him turn plain UI mockups into smooth, responsive apps. The attention to detail is always there."
+      "I’ve watched him transform simple UI ideas into smooth, responsive applications. His attention to detail shows in both functionality and user experience."
   },
   {
     name: "Ariyo Subomi",
     feedback:
-      "There’s a creativity to his work that keeps projects fresh. He doesn’t just code — he finds smarter ways to build."
+      "There’s a thoughtful creativity in how he builds. Basit doesn’t just write code — he looks for smarter, more efficient ways to solve problems."
   },
   {
     name: "Mahmud Haseeb",
     feedback:
-      "Basit’s code is well structured and easy to follow. You can tell he thinks about long-term maintainability, not just quick fixes."
+      "Basit writes structured, readable code with maintainability in mind. It’s clear he thinks beyond quick fixes and considers the long-term health of a project."
   },
   {
     name: "Adebowale",
     feedback:
-      "Calm under pressure and quick to adapt. No matter the stack, he finds a way to keep things moving forward."
+      "He stays composed under pressure and adapts quickly when things change. Regardless of the stack, Basit keeps progress moving forward."
   },
   {
     name: "Teniola",
     feedback:
-      "Every project I’ve seen from him balances precision with creativity. It’s not just functional — it feels polished."
+      "Every project I’ve seen from him feels carefully crafted. His work balances solid functionality with a polished, professional finish."
   },
   {
     name: "Tijani Fatimah",
     feedback:
-      "Basit puts real care into his work. Reliable, thoughtful, and always pushing for a higher standard."
+      "Basit brings intention and care into everything he builds. He’s reliable, detail-oriented, and always aims to deliver work he can stand behind."
   }
 ];

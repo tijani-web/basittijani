@@ -59,43 +59,48 @@ const Overview = () => {
     }
   };
 
-  return (
-    <div className='overview' ref={sectionRef} id='about'>
-      <p className="section-label" ref={addToLabelRefs}>Introduction</p>
-      <h1 ref={headingRef}>Overview.</h1>
-      
-      <div className="about">
-        <p ref={addToParagraphRefs}>
-          I'm <strong>Basit Tijani</strong>, a Software Engineering student at 
-          <strong> Aptech Institution</strong>, passionate about creating clean, 
-          responsive, and user-focused applications. 
-        </p>
+return (
+  <div className='overview' ref={sectionRef} id='about'>
+  <p className="section-label" ref={addToLabelRefs}>Introduction</p>
+  <h1 ref={headingRef}>Overview.</h1>
+  
+  <div className="about">
+    <p ref={addToParagraphRefs}>
+      I'm <strong>Basit Tijani</strong>, a software engineer building 
+      <em> scalable, user-centric systems</em> with clean architecture and intuitive UX.
+    </p>
 
-        <p className='section-label' ref={addToLabelRefs}>Technical Skills</p>
-        <p ref={addToParagraphRefs}>
-          I currently work with <strong>React, JavaScript, C/C++, and REST APIs</strong>, 
-          while continuously expanding my knowledge in other technologies. My focus is on 
-          building projects that balance performance, usability, and design.
-        </p>
+    
+    <p className='section-label' ref={addToLabelRefs}>Technical Stack</p>
+    <p ref={addToParagraphRefs}>
+      Working with <strong>JavaScript/TypeScript, C, C++, React, Next.js, Node.js, PostgreSQL</strong>, 
+      and modern DevOps to <em>architect and engineer production-grade systems</em> 
+      from complex technical requirements.
+    </p>
 
-        <p className='section-label' ref={addToLabelRefs}>Project</p>
-        <p ref={addToParagraphRefs}>
-          I'm the creator of <strong>StackProof</strong>, a developer challenge platform that 
-          helps programmers sharpen their skills through practical, real-world tasks.
-        </p>
+    <p className='section-label' ref={addToLabelRefs}>Selected Work</p>
+    <p ref={addToParagraphRefs}>
+      Built and scaled applications like 
+      <strong> Nexora</strong> (AI knowledge platform), 
+      <strong> FluxAPI</strong> (web API builder), and 
+      <strong> FlowPitch</strong> (collaborative roadmapping) — 
+      each designed for <em>real-world scalability and user adoption</em>.
+    </p>
 
-        <p className='section-label' ref={addToLabelRefs}>Mindset</p>
-        <p ref={addToParagraphRefs}> 
-          I value solitude for deep problem-solving, yet thrive on collaboration when it 
-          drives meaningful results.
-        </p>
+    <p className='section-label' ref={addToLabelRefs}>Approach</p>
+    <p ref={addToParagraphRefs}> 
+      I prioritize for <em>clear system design, intuitive user flows, and long-term maintainability.</em>. 
+      Focused on <strong>alignment, execution, and sustainable solutions</strong> 
+      whether working independently or collaborating.
+    </p>
 
-        <p className="tagline" ref={taglineRef}>
-          Always learning. Always building.
-        </p>
-      </div>
-    </div>
-  );
+    <p className="tagline" ref={taglineRef}>
+      I build systems people actually use.
+    </p>
+  </div>
+</div>
+);
+
 };
 
 export default Overview;

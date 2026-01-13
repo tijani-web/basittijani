@@ -1,5 +1,45 @@
 export const projects = [
   {
+    imgPath: "/images/nexora.png",
+    projectName: "Nexora",
+    description: [
+      "Nexora is an AI-enhanced question and    answer platform where users can ask    questions, post answers, vote, and accept  solutions. The platform integrates AI    assistance for title refinement, tag    suggestions, and content summarization,    while maintaining a strong community-driven knowledge-sharing model."
+    ],
+     liveLink: "https://nexora-five-iota.vercel.app",
+     codeLink: "https://github.com/tijani-web/nexora",
+     tech: ["Next.js", "React", "Node.js", "Express", "PostgreSQL", "Prisma", "Tailwind CSS", "AI APIs"]
+  },
+  {
+    imgPath: "/images/fluxapi.png",
+    projectName: "Flux API",
+    description: [
+      "Flux API is a web-based API builder that allows developers to design, mock, document, and test endpoints without setting up a traditional backend. It supports sandboxed execution, environment variables, auto-generated documentation, and collaborative workflows for rapid API prototyping."
+    ],
+    liveLink: "https://fluxapi-beta.vercel.app/",
+    codeLink: "https://github.com/tijani-web/fluxapi",
+    tech: ["Next.js", "Node.js", "Express", "PostgreSQL", "Prisma", "Docker", "Monaco Editor", "WebSockets"]
+  },
+  {
+    imgPath: "/images/flowpitch.png",
+    projectName: "FlowPitch",
+    description: [
+      "FlowPitch is a collaborative roadmap and feedback platform for startups. It enables teams to collect feature requests, manage backlogs, track progress visually, and engage with their community through discussions, voting, and real-time updates."
+    ],
+    liveLink: "https://flowpitch.vercel.app",
+    codeLink: "https://github.com/tijani-web/flowpitch",
+    tech: ["Next.js", "React", "Node.js", "PostgreSQL", "Prisma", "Drag and Drop", "Tailwind CSS"]
+  },
+  {
+    imgPath: "/images/zylorix.png",
+    projectName: "Zylorix (Ongoing Research)",
+    description: [
+      "Xylorix is an experimental virtual STEM simulation platform focused on building modular scientific simulations across physics, chemistry, and related domains. The project explores dynamic parameter-driven simulations, node-based workflows, and 3D visualization pipelines as part of ongoing research."
+    ],
+    liveLink: "https://zylorix.vercel.app",
+    codeLink: "https://github.com/tijani-web/zylorix",
+    tech: ["Next.js", "Three.js", "Node.js", "PostgreSQL", "Prisma", "Simulation Engines"]
+  },
+  {
     imgPath: "/projectsImages/stackproof.png",
     projectName: "StackProof",
     description: [
@@ -8,6 +48,16 @@ export const projects = [
     liveLink: "https://tijani-web.github.io/stack-proof-app/",
     codeLink: "https://github.com/tijani-web/stack-proof-app",
     tech: ["React", "Firebase", "Firestore", "Monaco Editor", "Judge0 API", "CSS"]
+  },
+    {
+    imgPath: "/projectsImages/fintecbank.png",
+    projectName: "Banking & FinTech System (C + Docs UI)",
+    description: [
+      "A C-based banking and fintech system featuring PIN authentication, admin and customer roles, and transaction tracking. It supports loans, investments, financial analytics, and automatic data persistence through file storage."
+    ],
+    liveLink: "https://tijani-web.github.io/fintech-docs-ui/",
+    codeLink: "https://github.com/tijani-web/banking-fintech-system-c",
+    tech: ["C"]
   },
   {
     imgPath: "/projectsImages/wandermind.png",
@@ -20,14 +70,24 @@ export const projects = [
     tech: ["React", "Firebase", "Firestore", "OpenAI API", "CSS"]
   },
   {
-    imgPath: "/projectsImages/fintecbank.png",
-    projectName: "Banking & FinTech System (C + Docs UI)",
+    imgPath: "/projectsImages/carrior.png",
+    projectName: "Carrio Motors",
     description: [
-      "A C-based banking and fintech system featuring PIN authentication, admin and customer roles, and transaction tracking. It supports loans, investments, financial analytics, and automatic data persistence through file storage."
+      "Carrio Motors is a Single Page Application (SPA) developed as a project at Aptech Computer Education. The project showcases a responsive car dealership platform where users can explore, compare, and interact with premium car models."
     ],
-    liveLink: "https://tijani-web.github.io/fintech-docs-ui/",
-    codeLink: "https://github.com/tijani-web/banking-fintech-system-c",
-    tech: ["C"]
+    liveLink: "https://carrio-motors.vercel.app",
+    codeLink: "https://github.com/tijani-web/carrio-motors",
+    tech: ["React.js", "GSAP", "HTML5 API", "CSS", "JSON"]
+  },
+  {
+    imgPath: "/projectsImages/client.png",
+    projectName: "ClientSphere",
+    description: [
+      "ClientSphere is a multi-page freelance client dashboard built with React and plain CSS as part of the Elevvo Pathways Front-End Web Development Internship. Features include project tracking, charts, notifications, and LocalStorag"
+    ],
+    liveLink: "https://clientsphere-dashboard.vercel.app",
+    codeLink: "https://github.com/tijani-web/clientsphere-dashboard",
+    tech: ["React", "Router", "Css"]
   },
   {
     imgPath: "/projectsImages/cargo.png",

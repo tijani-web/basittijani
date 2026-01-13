@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
@@ -10,90 +9,50 @@ const Skills = () => {
   const headingRef = useRef(null);
   const labelRef = useRef(null);
   const subtitleRef = useRef(null);
-  const gridContainerRef = useRef(null);
   const cardRefs = useRef([]);
 
-  const items = [
+  const skillsData = [
     {
+      category: "Core Languages",
       image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
-      title: "HTML5",
-      subtitle: "Markup Language",
-      handle: "@html5",
-      borderColor: "#E34F26",
-      gradient: "linear-gradient(145deg, #E34F26, #111)",
-      url: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "C", "C++"],
+      description: "Foundational programming languages and web standards"
     },
     {
-      image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
-      title: "CSS3",
-      subtitle: "Styling Language",
-      handle: "@css",
-      borderColor: "#264de4",
-      gradient: "linear-gradient(145deg, #264de4, #111)",
-      url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
-    },
-    {
-      image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
-      title: "JavaScript",
-      subtitle: "Programming Language",
-      handle: "@javascript",
-      borderColor: "#F7DF1E",
-      gradient: "linear-gradient(145deg, #F7DF1E, #111)",
-      url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-    },
-    {
+      category: "Frontend Engineering",
       image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
-      title: "React",
-      subtitle: "Frontend Library",
-      handle: "@react",
-      borderColor: "#61DBFB",
-      gradient: "linear-gradient(145deg, #61DBFB, #111)",
-      url: "https://reactjs.org/"
+      skills: ["React", "Next.js", "Client-side Routing & State Management", "Responsive & Accessible UI Design", "UX Flow Design & User-Centered Interfaces"],
+      description: "Modern frontend frameworks and user experience design"
     },
     {
-      image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
-      title: "C",
-      subtitle: "Programming Language",
-      handle: "@c",
-      borderColor: "#00599C",
-      gradient: "linear-gradient(145deg, #00599C, #111)",
-      url: "https://cplusplus.com/"
+      category: "Backend Engineering",
+      image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
+      skills: ["Node.js", "Express.js", "REST API Design & Architecture", "Authentication & Authorization Systems", "WebSocket & Real-time Communication"],
+      description: "Server-side architecture and API development"
     },
     {
-      image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
-      title: "C++",
-      subtitle: "Programming Language",
-      handle: "@cplusplus",
-      borderColor: "#00599C",
-      gradient: "linear-gradient(145deg, #00599C, #111)",
-      url: "https://cplusplus.com/"
+      category: "Databases & Data",
+      image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+      skills: ["PostgreSQL", "Firebase", "Relational Data Modeling", "API Data Validation & Serialization", "JSON-based Data Contracts"],
+      description: "Database management and data architecture"
     },
     {
-      image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg",
-      title: "Firebase",
-      subtitle: "Auth & Firestore",
-      handle: "@firebase",
-      borderColor: "#FFCA28",
-      gradient: "linear-gradient(145deg, #FFCA28, #111)",
-      url: "https://firebase.google.com/"
+      category: "Dev Tools & Platforms",
+      image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+      skills: ["Git & GitHub", "Docker", "Railway", "Vercel", "Environment Configuration & Secrets Management"],
+      description: "Development workflow and deployment infrastructure"
     },
     {
-      image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/json/json-original.svg",
-      title: "JSON",
-      subtitle: "Data Format",
-      handle: "@json",
-      borderColor: "#FF6B6B",
-      gradient: "linear-gradient(145deg, #FF6B6B, #111)",
-      url: "https://www.json.org/json-en.html"
-    },
-    {
-      image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
-      title: "GitHub",
-      subtitle: "Version Control",
-      handle: "@github",
-      borderColor: "#181717",
-      gradient: "linear-gradient(145deg, #181717, #111)",
-      url: "https://github.com/yourusername"
+      category: "System Architecture",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+      skills: [
+        "Distributed Systems Design", 
+        "API Gateway & Service Mesh",
+        "API-first Design",
+        "Load Balancing & Auto-scaling",
+        "Database Sharding & Replication"
+  ],
+  description: "Enterprise-grade system architecture and design patterns"
     }
   ];
 
@@ -146,7 +105,6 @@ const Skills = () => {
     });
 
     return () => {
-      // Clean up scroll triggers
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
@@ -154,29 +112,36 @@ const Skills = () => {
   return (
     <div className='portfolio-skills-section' ref={sectionRef}>
       <div className="portfolio-skill-heading">
-        <p className="portfolio-section-label" ref={labelRef}>Technical Expertise</p>
-        <h1 ref={headingRef}>My Development Toolbox</h1>
+        <p className="portfolio-section-label" ref={labelRef}>Technical Stack</p>
+        <h1 ref={headingRef}>Engineering Toolkit</h1>
         <p className="portfolio-skill-subtitle" ref={subtitleRef}>
-          Technologies, languages, and platforms I use to turn ideas into functional, user-friendly applications.
+          Technologies and methodologies for building scalable, production-ready systems
         </p>
       </div>
       
-      <div className="portfolio-skills-grid" ref={gridContainerRef}>
-        {items.map((item, index) => (
+      <div className="portfolio-skills-grid">
+        {skillsData.map((category, index) => (
           <div 
-            key={index}
+            key={category.category}
             className="portfolio-skill-card"
             ref={el => cardRefs.current[index] = el}
-            style={{ '--card-gradient': item.gradient, '--border-color': item.borderColor }}
           >
             <div className="portfolio-skill-img-wrapper">
-              <img src={item.image} alt={item.title} />
+              <img src={category.image} alt={category.category} />
             </div>
             
             <div className="portfolio-skill-info">
-              <h3>{item.title}</h3>
-              <div className="portfolio-skill-role">{item.subtitle}</div>
-              <div className="portfolio-skill-handle">{item.handle}</div>
+              <h3>{category.category}</h3>
+              <div className="portfolio-skill-role">{category.description}</div>
+              
+              <div className="portfolio-skills-list">
+                {category.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} className="portfolio-skill-item">
+                    <div className="portfolio-skill-dot"></div>
+                    <span className="portfolio-skill-name">{skill}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         ))}

@@ -2,98 +2,94 @@ import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { projects } from '../constant/projects';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const containerRef = useRef(null);
   const projectsRef = useRef([]);
-  const itemsPerPage = { desktop: 3, tablet: 2, mobile: 3 };
 
-  // Calculate items per page based on screen size
-  const getItemsPerPage = () => {
-    if (typeof window === 'undefined') return itemsPerPage.desktop;
-    if (window.innerWidth < 768) return itemsPerPage.mobile;
-    if (window.innerWidth < 1024) return itemsPerPage.tablet;
-    return itemsPerPage.desktop;
-  };
-
-  const [itemsPerPageState, setItemsPerPageState] = useState(getItemsPerPage());
-
+  // Responsive items per page
   useEffect(() => {
-    const handleResize = () => {
-      setItemsPerPageState(getItemsPerPage());
+    const updateItems = () => {
+      if (window.innerWidth < 768) setItemsPerPage(1);
+      else if (window.innerWidth < 1024) setItemsPerPage(2);
+      else setItemsPerPage(3);
     };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    
+    updateItems();
+    window.addEventListener('resize', updateItems);
+    return () => window.removeEventListener('resize', updateItems);
   }, []);
 
-  // Calculate total pages
-  const totalPages = Math.ceil(projects.length / itemsPerPageState);
+  const totalPages = Math.ceil(projects.length / itemsPerPage);
+  const indexOfLast = currentPage * itemsPerPage;
+  const indexOfFirst = indexOfLast - itemsPerPage;
+  const currentProjects = projects.slice(indexOfFirst, indexOfLast);
 
-  // Get current projects
-  const indexOfLastProject = currentPage * itemsPerPageState;
-  const indexOfFirstProject = indexOfLastProject - itemsPerPageState;
-  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
-
-  // Handle page change
   const paginate = (pageNumber) => {
-    // Animate out current projects
+    if (isAnimating || pageNumber < 1 || pageNumber > totalPages) return;
+    
+    setIsAnimating(true);
+    
+    // Animate out
     gsap.to(projectsRef.current, {
       opacity: 0,
-      y: 20,
+      y: 30,
       duration: 0.3,
-      stagger: 0.1,
+      stagger: 0.05,
+      ease: "power2.in",
       onComplete: () => {
         setCurrentPage(pageNumber);
       }
     });
   };
 
-  // Animate in projects when page changes or on initial load
+  // Animate in when page changes
   useEffect(() => {
-    if (projectsRef.current.length > 0) {
-      gsap.to(projectsRef.current, {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-        stagger: 0.1,
-        ease: "power2.out"
-      });
+    if (currentProjects.length > 0) {
+      projectsRef.current = projectsRef.current.slice(0, currentProjects.length);
+      
+      gsap.fromTo(projectsRef.current,
+        { opacity: 0, y: 40, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "back.out(1.7)",
+          delay: 0.1,
+          onComplete: () => setIsAnimating(false)
+        }
+      );
     }
-  }, [currentPage, currentProjects]);
+  }, [currentProjects]);
 
-  // Set up scroll animations
+  // Initial animations
   useEffect(() => {
-    projectsRef.current.forEach((ref, i) => {
-      if (ref) {
-        gsap.fromTo(ref,
-          { opacity: 0, y: 50 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            delay: i * 0.1,
-            scrollTrigger: {
-              trigger: ref,
-              start: "top 85%",
-              toggleActions: "play none none none"
-            }
-          }
-        );
+    // Title animation
+    gsap.from('.portfolio-section-name', {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: '.portfolio-section-name',
+        start: "top 80%",
+        toggleActions: "play none none none"
       }
     });
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, [currentProjects]);
+    return () => ScrollTrigger.getAll().forEach(t => t.kill());
+  }, []);
 
   return (
-    <div className="portfolio-projects-container">
+    <div className="portfolio-projects-container" ref={containerRef}>
       <h1 className="portfolio-section-name">My Projects</h1>
       
       <div className="portfolio-grid-layout">
@@ -105,7 +101,20 @@ const Projects = () => {
           >
             <div className="portfolio-img-wrapper">
               <div className="portfolio-item-image">
-                <img src={project.imgPath} alt={project.projectName} />
+                <img 
+                  src={project.imgPath} 
+                  alt={project.projectName}
+                  loading="lazy"
+                  onError={(e) => {
+                    e.target.src = "https://via.placeholder.com/400x250/0a0a0f/00e0ff?text=Project+Preview";
+                  }}
+                />
+                <div className="image-overlay"></div>
+                {project.liveLink ? (
+                  <span className="project-status live">Live</span>
+                ) : (
+                  <span className="project-status dev">In Development</span>
+                )}
               </div>
             </div>
             
@@ -119,32 +128,32 @@ const Projects = () => {
               </div>
               
               <div className="portfolio-tech-list">
-                {project.tech.map((tech, i) => (
+                {project.tech.slice(0, 4).map((tech, i) => (
                   <span key={i} className="portfolio-tech-tag">{tech}</span>
                 ))}
+                {project.tech.length > 4 && (
+                  <span className="tech-more">+{project.tech.length - 4}</span>
+                )}
               </div>
               
               <div className="portfolio-action-buttons">
+                {project.liveLink && (
+                  <a 
+                    href={project.liveLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="portfolio-btn primary-btn"
+                  >
+                    <FaExternalLinkAlt /> Live Demo
+                  </a>
+                )}
                 <a 
-                  href={project.liveLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="portfolio-btn primary-btn"
-                >
-                  Live
-                </a>
-                <a style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.5rem"
-                }}
                   href={project.codeLink} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="portfolio-btn secondary-btn"
                 >
-                  Code
-                  <FaGithub size={16}/>
+                  <FaGithub /> View Code
                 </a>
               </div>
             </div>
@@ -156,27 +165,31 @@ const Projects = () => {
         <button 
           className="paginate-control prev-btn"
           onClick={() => paginate(currentPage - 1)}
-          disabled={currentPage === 1}
+          disabled={currentPage === 1 || isAnimating}
         >
-          Prev
+          <FaArrowLeft /> Previous
         </button>
         
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-          <button
-            key={page}
-            className={`paginate-number ${currentPage === page ? 'active-page' : ''}`}
-            onClick={() => paginate(page)}
-          >
-            {page}
-          </button>
-        ))}
+        <div className="page-indicators">
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+            <button
+              key={page}
+              className={`paginate-number ${currentPage === page ? 'active-page' : ''}`}
+              onClick={() => paginate(page)}
+              disabled={isAnimating}
+              aria-label={`Go to page ${page}`}
+            >
+              {page}
+            </button>
+          ))}
+        </div>
         
         <button 
           className="paginate-control next-btn"
           onClick={() => paginate(currentPage + 1)}
-          disabled={currentPage === totalPages}
+          disabled={currentPage === totalPages || isAnimating}
         >
-          Next
+          Next <FaArrowRight />
         </button>
       </div>
     </div>

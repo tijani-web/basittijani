@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaPaperPlane, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaPaperPlane, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-import { FaXTwitter } from "react-icons/fa6";
 
 const Contact = () => {
   const form = useRef();
@@ -11,6 +11,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,6 +22,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Prevent multiple submissions
+    if (isLoading) return;
+    
+    setIsLoading(true);
 
     emailjs
       .sendForm(
@@ -41,6 +47,9 @@ const Contact = () => {
           position: "bottom-right",
           autoClose: 3000,
         });
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -64,6 +73,7 @@ const Contact = () => {
                 placeholder="Your Name"
                 required
                 className="form-input"
+                disabled={isLoading}
               />
             </div>
 
@@ -76,6 +86,7 @@ const Contact = () => {
                 placeholder="Your Email"
                 required
                 className="form-input"
+                disabled={isLoading}
               />
             </div>
 
@@ -88,27 +99,41 @@ const Contact = () => {
                 rows="5"
                 required
                 className="form-input"
+                disabled={isLoading}
               ></textarea>
             </div>
 
-            <button type="submit" className="submit-btn btn primary">
-              Send Message <FaPaperPlane className="btn-icon" />
+            <button 
+              type="submit" 
+              className="submit-btn btn primary"
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <span className="loading-state">
+                  <span className="spinner"></span>
+                  Sending...
+                </span>
+              ) : (
+                <>
+                  Send Message <FaPaperPlane className="btn-icon" />
+                </>
+              )}
             </button>
           </form>
 
           <div className="social-links">
             <h3>Or find me on</h3>
             <div className="social-icons">
-              <a href="https://github.com/tijani-web" target="_blank" className="social-link">
+              <a href="https://github.com/tijani-web" target="_blank" className="social-link" rel="noopener noreferrer">
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/basit-tijani-4362b3320/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BDwxG1JF3Q9GPLZQvHefV8w%3D%3D" target="_blank" className="social-link">
+              <a href="https://www.linkedin.com/in/basit-tijani-4362b3320/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BDwxG1JF3Q9GPLZQvHefV8w%3D%3D" target="_blank" className="social-link" rel="noopener noreferrer">
                 <FaLinkedin />
               </a>
               <a href="https://x.com/tijani_web" className="social-link" target='_blank' rel="noopener noreferrer" aria-label="Twitter">
                 <FaXTwitter />
               </a>
-              <a href="https://www.instagram.com/tijanidev?igsh=MWVpczc4eTBpM2xlYQ==" target="_blank" className="social-link">
+              <a href="https://www.instagram.com/tijanidev?igsh=MWVpczc4eTBpM2xlYQ==" target="_blank" className="social-link" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
             </div>

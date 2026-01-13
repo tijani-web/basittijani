@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="hero-text">
             <div className="hero-heading">
                 <SplitText
-                  text={`let mission = "code that lasts beyond trends";`}
+                  text={`let mission = "// code that outlives trends";`}
                   className="hero-header"
                   delay={100}
                   duration={0.4}
