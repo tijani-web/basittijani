@@ -1,64 +1,50 @@
-# Basit Tijani – Portfolio
+# 👋 Hi, I'm Basit Tijani | Software Engineer
 
-👋 Hi, I'm **Basit Tijani**, a Software Engineering student at Aptech Institution. I focus on writing code that’s clear, functional, and practical for real-world use.
-
----
-
-## 🌐 Live Portfolio
-Check out my live portfolio here: [https://basittijani.com](https://basittijani.com)  
+**Building scalable, production-ready systems with clean architecture and intuitive UX**
 
 ---
 
-## 📂 Featured Project
-### StackProof
-A developer challenge platform designed to help programmers enhance their skills through practical, real-world coding tasks.  
-
-- **Role:** Creator & Developer  
-- **Tech Used:** React, JavaScript, REST API, Firebase, Firestore  
-- **Live Demo:** [StackProof Live](https://tijani-web.github.io/stack-proof-app/)  
-- **Source Code:** [GitHub Repository](https://github.com/tijani-web/stack-proof-app)  
+## 🎯 What I Do
+I architect and engineer full-stack web applications that solve real problems. My focus is on transforming complex requirements into reliable, production-grade systems through clean code, thoughtful design, and scalable architecture.
 
 ---
 
-## 🛠 Tech Stack
-**Frontend:** React · JavaScript · HTML · CSS  
-**Tools:** Vite · Git · GitHub  
-**Styling & Animations:** CSS3 · GSAP (for smooth animations)  
-**Backend & APIs:** REST APIs · C/C++ · Firebase/Firestore Auth  
+## 🛠 Core Stack
+**Frontend:** React, Next.js, TypeScript, Tailwind CSS  
+**Backend:** Node.js, Express.js, PostgreSQL, Firebase  
+**Tools:** Git, Docker, Vercel, Railway, Prisma  
+**Languages:** JavaScript/TypeScript, C, C++  
 
 ---
 
-## ⚡ Key Features
-- Fully responsive design (desktop & mobile)  
-- Smooth animations and transitions  
-- Clean, minimal, and user-focused UI/UX  
-- Fast and optimized performance  
+## 🚀 Featured Projects
+
+### **FluxAPI** – Web API Builder & Sandbox
+> Complete API development environment with mock servers, webhook simulation, and execution pipelines. Built for rapid prototyping and collaboration.
+
+### **FlowPitch** – Collaborative Roadmap Platform  
+> Startup feedback and feature tracking system with voting, discussions, and transparent progress visualization.
+
+### **Nexora** – AI-Enhanced Knowledge Platform
+> Community-driven Q&A platform with AI-assisted content refinement, tagging, and summarization.
+
+### **Zylorix** – Virtual STEM Lab *(Research)*
+> Experimental simulation platform for modular scientific modeling and interactive visualizations.
 
 ---
-I’m always open to collaborating on projects, discussing ideas, or just chatting about tech!
 
-Email: tijanibwebdev@gmail.com
-LinkedIn: [Basit Tijani](https://www.linkedin.com/in/basit-tijani-4362b3320/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BYvADMSUvTCKDIbwk5J82Ow%3D%3D)_
-Twitter/X: @tijani_web
-Portfolio: https://basittijani.com
+## 📊 GitHub Snapshot
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=tijani-web&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=tijani-web&layout=compact&theme=radical&hide_border=true&bg_color=0d1117)
 
-Made with ❤️ by Basit Tijani
+---
 
+## 📫 Connect
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://basit-tijani.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/basit-tijani)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/tijani_web)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tijani-web)
 
-## 🚀 Getting Started
-To run this portfolio locally:
+---
 
-```bash
-# Clone the repository
-git clone https://github.com/tijani-web/basittijani.git
-
-# Navigate into the project directory
-cd basittijani
-
-# Install dependencies
-npm install
-
-# Start the development server
-
-npm run dev
-
+> *"I build systems people actually use."*
