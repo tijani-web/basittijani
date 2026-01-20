@@ -1,5 +1,23 @@
 {
+  "redirects": [
+    {
+      "source": "https://www.basittijani.com/:path*",
+      "destination": "https://basittijani.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://basittijani.com>; rel=\"canonical\""
+        }
+      ]
+    }
   ]
 }
